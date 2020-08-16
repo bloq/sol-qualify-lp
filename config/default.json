@@ -1,0 +1,6 @@
+{ 
+  "provider": "https://ropsten.infura.io/v3/<your id here>",
+  "gasPrice": 35000000000,
+  "contracts": {
+  }
+}
