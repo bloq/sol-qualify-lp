@@ -2,14 +2,18 @@
 
 ## Summary
 
-This is a simple list of admin-controlled addresses.
+This is a simple list of admin-controlled addresses, forming an
+```
+        (address -> uint256 metadata)
+```
+on-chain mapping data type.
 
 ## Overview
 
-The primary use is for creating on-chain filtering lists.  A key
-motivation was mirroring the off-chain [Token
-Lists](https://uniswap.org/blog/token-lists/) with similar on-chain
-infrastructure.
+The primary use is for creating on-chain filtering lists, or creating
+contract<->contract proxy routes.  A key motivation was mirroring
+the off-chain [Token Lists](https://uniswap.org/blog/token-lists/)
+with similar on-chain infrastructure.
 
 Anybody may create and administer their own token list ("AddressList"),
 using a provided factory contract.
@@ -22,9 +26,24 @@ Synthetix or Yearn universe, and more.
 
 * Fast
 * O(1) queries, addition and removal
-* Admin-specified value associated with each address (must not be zero)
+* Admin-specified **metadata** value associated with each address.  uint256.  Cannot be zero.
 * Role-based access control (RBAC), to separate list admin duties
   from list owner.
+
+## Metadata
+
+As described in the summary, an AddressList is an on-chain
+(address,uint256) mapping utility.
+
+In the simple case, the metadata value is set to one (1), to indicate
+presence in the set of addresses.
+
+In more complex examples, this can be used in forwarding and proxy
+scenarios as an on-chain (address,address) mapping, or even an on-chain
+(uint256,address) mapping if you don't mind a few ugly casts.
+
+The only requirements are that both key (address) and value (uint256)
+must be non-zero.
 
 ## Administration
 
