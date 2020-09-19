@@ -39,5 +39,6 @@ Ethereum mainnet deployment, v0.9.0: [0xeE87996440515154fb913Fada7aBB4F2Caecb14f
 
 This can only provide a minimum guarantee that the address provided _seems to behave like_ a Uniswap
 or Balancer pool token.  A fork such as SushiSwap, using the same
-ABI as Uniswap, will pass these qualifications.
+ABI as Uniswap, will pass these qualifications (there is a plan to fix this limitation in the next version,
+by using the Uniswap Router).
 
