@@ -35,5 +35,21 @@ contract QualifyLP is IQualifyLP {
         require(blockTimestampLast > 0);
 
 	lps[lpToken] = LP_UNISWAP;
+
+	return true;
+    }
+
+    function qualifyBalancerLP(address lpToken) external override returns (bool) {
+	BPool bpool = BPool(lpToken);
+
+	require(bpool.totalSupply() > 0);
+	require(bpool.isPublicSwap() == true);
+	require(bpool.isFinalized() == true);
+	require(bpool.getNumTokens() >= 2);
+	require(bpool.getSwapFee() > 0);
+
+	lps[lpToken] = LP_BALANCER;
+
+	return true;
     }
 }
