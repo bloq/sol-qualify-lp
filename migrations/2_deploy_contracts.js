@@ -1,4 +1,4 @@
-let AddressListFactory = artifacts.require("AddressListFactory")
+let QualifyLP = artifacts.require("QualifyLP")
 module.exports = async function (deployer, network) {
     try {
 
@@ -19,7 +19,7 @@ module.exports = async function (deployer, network) {
                 throw Error(`Are you deploying to the correct network? (network selected: ${network})`)
         }
 
-        await deployer.deploy(AddressListFactory)
+        await deployer.deploy(QualifyLP)
     } catch (e) {
         console.log(`Error in migration: ${e.message}`)
     }
