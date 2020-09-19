@@ -33,7 +33,7 @@ Import the interface file `IQualifyLP.sol` into a solidity contract, then treat 
 
 ## Deployment
 
-Ethereum mainnet deployment: [0xeE87996440515154fb913Fada7aBB4F2Caecb14f](https://etherscan.io/address/0xee87996440515154fb913fada7abb4f2caecb14f)
+Ethereum mainnet deployment, v0.9.0: [0xeE87996440515154fb913Fada7aBB4F2Caecb14f](https://etherscan.io/address/0xee87996440515154fb913fada7abb4f2caecb14f)
 
 ## Caveats
 
