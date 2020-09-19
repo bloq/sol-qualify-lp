@@ -29,3 +29,9 @@ Import the interface file `IQualifyLP.sol` into a solidity contract, then treat 
 
 Ethereum mainnet deployment: [0xeE87996440515154fb913Fada7aBB4F2Caecb14f](https://etherscan.io/address/0xee87996440515154fb913fada7abb4f2caecb14f)
 
+## Caveats
+
+This can only provide a minimum guarantee that the address provided _seems to behave like_ a Uniswap
+or Balancer pool token.  A fork such as SushiSwap, using the same
+ABI as Uniswap, will pass these qualifications.
+
