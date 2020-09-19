@@ -7,6 +7,12 @@ like a Uniswap or Balancer LP pool token.
 
 ## Using
 
+### Step 1 - qualify LP token
+
+Call `qualifyUniswapLP()` or `qualifyBalancerLP()` to validate an LP token, and add it to the database.
+
+### Step 2 - query qualifications database
+
 Import the interface file `IQualifyLP.sol` into a solidity contract, then treat as a simple mapping:
 
 ```
